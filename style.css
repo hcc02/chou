@@ -2,23 +2,61 @@
 #fff    - white
 #FAEBD7 - milk tea color
 */
-
-html{
-    width: 100%;
-    height: 100%S;
+body{
+    padding: 50px;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    background-color: #FAEBD7;
+    color: black;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 1px; 
 }
 
-body{
-    padding: 150px ;
-    margin: 0;
-    background-color: #FAEBD7;
+.outframe{
+    display: flex;
+    max-width: 950px;
+    border: solid 5px white;
+    padding: 50px;
+    position: relative; 
+  }
+
+ul{
+    padding: 0;
+}
+
+.photo{
+    border-radius: 75%;
+    float: left;
+    margin: 10px;
+    display: flex;
+    padding: 25px;
+}
+
+.left,.right{
+    padding: 15px;
+  }
+
+.left{
+    flex: 5;
+    padding-right: 50px;
+    border-right: solid 1.5px white;
+}
+
+.right{
+    flex: 7;
+    padding-left: 50px;
+    padding-top: 150px;
 }
 
 h1{
     font-family: 微軟正黑體;
-    margin: 0;
+    margin: 10px;
     font-size: xx-large;
+    align-content: center;
     display: flex;
+    position: relative;
 }
 
 h3{
@@ -28,9 +66,23 @@ h3{
     display: flex;
 }
 
+h4{
+    margin: 0;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
 hr{
-    border-bottom:  4px;
+    border-bottom: solid 4px white;
     width: 100%;
+    border: none;
+}
+
+.small{
+    font-size: 12px;
+    vertical-align: bottom;
+    position: absolute;
+    right: 0;
 }
 
 .button{
@@ -39,12 +91,19 @@ hr{
     bottom: 15px;
 }
 
-.btn{
-    border-style: solid;
-    border-color: red;
+.skill{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    padding: 5px 10px;
-    margin-right: 25cm;
+.skill li{
+    width: 33%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
 }
 
 .circle{
@@ -55,10 +114,49 @@ hr{
     position: relative;
     overflow: hidden;
     background-color: rgba(232, 215, 92,0.3);
-  }
+}
+
+.circle::after{
+    content: '';
+    display: block;
+    background-color: #FAEBD7;
+    width: calc(100%-20px);
+    height: calc(100%-20px);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.d90,.d180,.d270,.d360{
+    width: 50%;
+    height: 50%;
+    background-color: purple;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.d180{
+    position: absolute;
+    top: 25px;
+}
+
+.d270{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.d360{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
 
 .ins{   
-    width: 3%;
-    height: 3%;
+    width: 50px;
+    height: 50px;
     border-radius:50%
 }
